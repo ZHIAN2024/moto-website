@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #1a1a1a;
+}
+
+/* 导航栏样式 */
+header {
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+/* 首页样式 */
+.hero {
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0.6) 100%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 8px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+.explore-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    border: 2px solid #FFD700;
+    color: #FFD700;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.explore-btn:hover {
+    background-color: #FFD700;
+    color: black;
+}
+
+/* 摩托车展示页面样式 */
+.motorcycles-hero {
+    height: 50vh;
+    background-image: url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.motorcycles-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0.6) 100%
+    );
+}
+
+.motorcycles {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.motorcycle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.motorcycle-card {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.motorcycle-card:hover {
+    transform: translateY(-5px);
+}
+
+.motorcycle-card img {
+    max-width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.motorcycle-card h3 {
+    color: #FFD700;
+    margin-bottom: 1rem;
+}
+
+.motorcycle-card p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.5rem;
+}
+
+.detail-btn {
+    background-color: transparent;
+    border: 2px solid #FFD700;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.detail-btn:hover {
+    background-color: #FFD700;
+    color: black;
+}
+
+/* 登录页面样式 */
+.login-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.login-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0.6) 100%
+    );
+}
+
+.login-container {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(33, 33, 33, 0.9);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    color: white;
+}
+
+.login-container h2 {
+    color: #FFD700;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.forgot-password {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #FFD700;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #f0c800;
+}
+
+.register-link {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.register-link .register-btn {
+    color: #FFD700;
+    text-decoration: none;
+    margin-left: 0.5rem;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* About section styles */
+.about-section {
+    padding: 6rem 2rem;
+    background-color: #222;
+    color: white;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content h2 {
+    text-align: center;
+    color: #FFD700;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    letter-spacing: 4px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.about-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+}
+
+.about-card h3 {
+    color: #FFD700;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.about-card p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+} 
